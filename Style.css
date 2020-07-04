@@ -1,0 +1,89 @@
+/*
+Lloyd Robinson G. Lopez
+N2
+ITMC Platform Technologies
+July 4, 2020
+Midterm Requirement
+
+
+Honor Code:
+This is my own work and I have not received any unauthorized help in completing this. I have not copied from my classmate, friend, nor any unauthorized resource.
+I am well aware of the policies stipulated in the handbook regarding academic dishonesty. If proven guilty, I won't be credited any points for this endeavor.
+*/
+
+body{
+	margin: 0 auto;
+	background: url("3311820.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+}
+.loginbox{
+	width: 350px;
+	height:450px;
+	background: #04383e;
+	color: #5bdbe8;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 20px;
+}
+.icon{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+h1{
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0 0 10px;
+	text-align: center;
+	font-size: 25px;
+}
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginbox input[type="text"], input[type="password"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size: 16px;
+}
+.loginbox input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+h5{
+	text-align: center;
+	padding-top: 0px;
+}
+.text-center{
+	font-size: 20px;
+}
