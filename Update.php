@@ -2,15 +2,15 @@
 Lloyd Robinson G. Lopez
 N2
 ITMC Platform Technologies
-July 4, 2020
-Midterm Requirement
+July 14, 2020
+Final Requirement
 
 Honor Code:
 I search some ideas at youtube:
 links:
 https://www.youtube.com/watch?v=mjVuBlwXASo
 https://www.youtube.com/watch?v=JZdMXUIMdQw
- 
+I am well aware of the policies stipulated in the handbook regarding academic dishonesty. If proven guilty, I won't be credited any points for this endeavor.
 -->
 <!DOCTYPE html>
 <?php include('conn.php'); ?>
@@ -75,7 +75,7 @@ https://www.youtube.com/watch?v=JZdMXUIMdQw
 						</td>
 						<td>
 							<!-- set the Delete.php file as its reference -->
-							<a href="Delete.php?del=<?php echo $row['ID']; ?>" class="del_btn">Delete</a>
+							<a href="Delete.php?del=<?php echo $row['ID']; ?>" class="del_btn" id="delete" onclick="return confirm('Delete Account?')">Delete</a>
 						</td>
 					</tr>
 				<?php } ?>
@@ -100,7 +100,7 @@ https://www.youtube.com/watch?v=JZdMXUIMdQw
 				</div>
 				<div class="input-group">
 					<?php if ($update == true): ?>
-					<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+					<button class="btn" type="submit" name="update" style="background: #556B2F;" >Update</button>
 					<?php else: ?>
 					<button class="btn"><a href="index1.php"> Home </a></button>
 					<?php endif ?>

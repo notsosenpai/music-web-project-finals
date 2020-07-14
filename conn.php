@@ -2,8 +2,8 @@
 Lloyd Robinson G. Lopez
 N2
 ITMC Platform Technologies
-July 4, 2020
-Midterm Requirement
+July 14, 2020
+Final Requirement
 
 
 Honor Code:

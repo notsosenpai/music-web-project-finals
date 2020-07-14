@@ -3,16 +3,17 @@
 Lloyd Robinson G. Lopez
 N2
 ITMC Platform Technologies
-July 4, 2020
-Midterm Requirement
-
+July 14, 2020
+Final Requirement
 
 Honor Code:
 This is my own work and I have not received any unauthorized help in completing this. I have not copied from my classmate, friend, nor any unauthorized resource.
 I am well aware of the policies stipulated in the handbook regarding academic dishonesty. If proven guilty, I won't be credited any points for this endeavor.
 -->
+
 <?php
 	include "conn.php";
+	require_once "redirect.php";
 ?>
 	<html>
 		<head>
@@ -37,11 +38,12 @@ I am well aware of the policies stipulated in the handbook regarding academic di
 					<input type="text" name="uname" placeholder="Enter Username">
 					<p>Password</p>
 					<input type="password" name="pname" placeholder="Enter Password">
-					<input type="submit" name="" value="Login">
+					<input type="submit" name="" value="LOGIN">
+					<button type="button" id="google-login-btn" onclick="window.location = '<?php echo $loginURL?>';">Login with Google</button>
 					<h5> or <h5>	
 					<!-- Modal signup form-->
 					<div class="text-center">
-						<a href=""  data-toggle="modal" data-target="#modalRegisterForm">Sign up</a>
+						<a href=""  data-toggle="modal" data-target="#modalRegisterForm"> SIGN UP </a>
 					</div>
 				</form>
 			</div>
@@ -78,10 +80,11 @@ I am well aware of the policies stipulated in the handbook regarding academic di
 									</div>
 
 								</div>
-									<!-- Sign up button-->
-									<div class="modal-footer d-flex justify-content-center">
-										<button type="submit" class="btn btn-deep-orange">Sign up</button>
-									</div>
+								
+								<!-- Sign up button-->
+								<div class="modal-footer d-flex justify-content-center">
+									<button type="submit" class="btn btn-deep-orange">Sign up</button>
+								</div>
 							</div>
 						</div>
 					</div>

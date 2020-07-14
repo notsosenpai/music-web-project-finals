@@ -2,12 +2,12 @@
 Lloyd Robinson G. Lopez
 N2
 ITMC Platform Technologies
-July 4, 2020
-Midterm Requirement
-
+July 14, 2020
+Final Requirement
 
 --Honor Code:
 I seek help doing this javascript in the internet to play music.
+I am well aware of the policies stipulated in the handbook regarding academic dishonesty. If proven guilty, I won't be credited any points for this endeavor.
 */
 	const songTitle = document.querySelector(".song-title");
 	const thumbnail = document.querySelector("#thumbnail");
@@ -21,7 +21,7 @@ I seek help doing this javascript in the internet to play music.
 	var songs = ["Maximillian - Beautiful Scars.mp3", "findinghope.mp3", "Kina - Can We Kiss Forever.mp3", "Joji - SLOW DANCING IN THE DARK.mp3","Post Malone - Circles.mp3","The Weeknd - Blinding Lights.mp3","Travis Scott - SICKO MODE ft. Drake.mp3","Music Hero - KLWKN.mp3"],
   songIndex = 0;
 
-	//song album picture
+	//song album pictures or thumbnails
 	(thumbnails = ["maximillianicon.jpg", "findinghopeicon.jpg", "kinaicon.jpg", "Jojiicon.jpg","posticon.jpg","theweekndicon.jpg","travisicon.jpg","musicheroicon.jpg"]),
   (songNames = [
     "Maximillian - Beautiful Scars",
@@ -34,64 +34,68 @@ I seek help doing this javascript in the internet to play music.
     "Music Hero - KLWKN"
   ]);
   
-function playPause() {
-	if (playing) {
-		const song = document.querySelector("#song"),
-		pp = document.querySelector("#pp"),
-		thumbnail = document.querySelector("#thumbnail");
-		pp.src = "pause.png";
-		song.play(); 
-		playing = false;
-		thumbnail.style.width = "160%";
-	} else {
-		pp.src = "IconsPlay.ico";
-		song.pause(); 
-		playing = true;
-		thumbnail.style.width = "130%";
+	// function that controls the pause/play of the song
+	function playPause() {
+		if (playing) {
+			const song = document.querySelector("#song"),
+			pp = document.querySelector("#pp"),
+			thumbnail = document.querySelector("#thumbnail");
+			pp.src = "pause.png";
+			song.play(); 
+			playing = false;
+			thumbnail.style.width = "160%";
+		} else {
+			pp.src = "IconsPlay.ico";
+			song.pause(); 
+			playing = true;
+			thumbnail.style.width = "130%";
+		}
 	}
-}
 
-function nextSong() {
-	songIndex++;
-	if (songIndex > songs.length-1) songIndex = 0;
-	document.querySelector("#song").src = songs[songIndex];
-	document.querySelector("#thumbnail").src = thumbnails[songIndex];
-	document.querySelector("#BG").src = thumbnails[songIndex];
-	playPause();
-	document.querySelector(".song-title").innerHTML = songNames[songIndex];
-}
+	// function that controls the switching of songs to the next one
+	function nextSong() {
+		songIndex++;
+		if (songIndex > songs.length-1) songIndex = 0;
+		document.querySelector("#song").src = songs[songIndex];
+		document.querySelector("#thumbnail").src = thumbnails[songIndex];
+		document.querySelector("#BG").src = thumbnails[songIndex];
+		playPause();
+		document.querySelector(".song-title").innerHTML = songNames[songIndex];
+	}
 
-function previousSong() {
-	songIndex--;
-	if (songIndex < 0) songIndex = songs.length-1;
-	document.querySelector("#song").src = songs[songIndex];
-	document.querySelector("#thumbnail").src = thumbnails[songIndex];
-	document.querySelector("#BG").src = thumbnails[songIndex];
-	playPause();
-	document.querySelector(".song-title").innerHTML = songNames[songIndex];
-}
+	// function that controls the switching of songs to the previous one
+	function previousSong() {
+		songIndex--;
+		if (songIndex < 0) songIndex = songs.length-1;
+		document.querySelector("#song").src = songs[songIndex];
+		document.querySelector("#thumbnail").src = thumbnails[songIndex];
+		document.querySelector("#BG").src = thumbnails[songIndex];
+		playPause();
+		document.querySelector(".song-title").innerHTML = songNames[songIndex];
+	}
 
-function updateProgressValue() {
-	const progressBar = document.querySelector("#progressBar");
-	progressBar.max = document.querySelector("#song").duration;
-	progressBar.value = document.querySelector("#song").currentTime;
-}
+	// function that controls the progress line of the songs
+	function updateProgressValue() {
+		const progressBar = document.querySelector("#progressBar");
+		progressBar.max = document.querySelector("#song").duration;
+		progressBar.value = document.querySelector("#song").currentTime;
+	}
 
-/* dropdown playslit */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+	/* dropdown playslit */
+	function myFunction() {
+	  document.getElementById("myDropdown").classList.toggle("show");
+	}
 
-window.onclick = function(event) {
-	if (!event.target.matches('.dropbtn')) {
-		var dropdowns = document.getElementsByClassName("dropdown-content");
-		var i;
-		for (i = 0; i < dropdowns.length; i++) {
-			var openDropdown = dropdowns[i];
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
 			}
 		}
 	}
-}
-setInterval(updateProgressValue, 700);
+	setInterval(updateProgressValue, 700);

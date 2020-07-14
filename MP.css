@@ -2,8 +2,8 @@
 Lloyd Robinson G. Lopez
 N2
 ITMC Platform Technologies
-July 4, 2020
-Midterm Requirement
+July 14, 2020
+Final Requirement
 
 Honor Code:
 This is my own work and I have not received any unauthorized help in completing this. I have not copied from my classmate, friend, nor any unauthorized resource.
@@ -14,125 +14,116 @@ I am well aware of the policies stipulated in the handbook regarding academic di
 @import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 
 body {
-  background: #000;
+	background: #000;
 }
 #BG {
-  position: absolute;
-  height: 350px;
-  width: 100%;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(40px);
+	position: absolute;
+	height: 350px;
+	width: 100%;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: blur(40px);
 }
 .container {
-  position: absolute;
-  height: 400pt;
-  width: 250pt;
-  margin: auto;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  border-radius: 8px;
-  box-shadow: 0 0 15px black;
+	position: absolute;
+	height: 400pt;
+	width: 250pt;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	border-radius: 8px;
+	box-shadow: 0 0 15px black;
 }
 #thumbnail {
-  position: absolute;
-  width: 130%;
-  transition: 1s;
+	position: absolute;
+	width: 130%;
+	transition: 1s;
 }
 .song-name {
-  position: absolute;
-  height: 190pt;
-  width: 400pt;
-  background: -webkit-linear-gradient(45deg, rgb(72, 0, 139), rgb(0, 199, 149));
-  top: -25%;
-  filter: blur(30px);
-  z-index: 11;
+	position: absolute;
+	height: 190pt;
+	width: 400pt;
+	background: -webkit-linear-gradient(45deg, rgb(72, 0, 139), rgb(0, 199, 149));
+	top: -25%;
+	filter: blur(30px);
+	z-index: 11;
 }
 .box {
-  position: absolute;
-  height: 180pt;
-  width: 400pt;
-  background: -webkit-linear-gradient(45deg, rgb(72, 0, 139), rgb(0, 199, 149));
-  bottom: -15%;
-  filter: blur(30px);
+	position: absolute;
+	height: 180pt;
+	width: 400pt;
+	background: -webkit-linear-gradient(45deg, rgb(72, 0, 139), rgb(0, 199, 149));
+	bottom: -15%;
+	filter: blur(30px);
 }
 .song-title {
-  position: absolute;
-  z-index: 12;
-  color: white;
-  font-family: "Lobster", cursive;
-  font-size: 25px;
-  top: 10%;
-text-align: center;
+	position: absolute;
+	z-index: 12;
+	color: white;
+	font-family: "Lobster", cursive;
+	font-size: 25px;
+	top: 10%;
+	text-align: center;
 }
 #pp {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  filter: invert(1);
-  cursor: pointer;
-  bottom: 12%;
-  z-index:11;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	filter: invert(1);
+	cursor: pointer;
+	bottom: 12%;
+	z-index:11;
 }
-#ns,
-#ps {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  filter: invert(1);
-  cursor: pointer;
-  bottom: 14%;
-  z-index:11;
+#ns, #ps {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	filter: invert(1);
+	cursor: pointer;
+	bottom: 14%;
+	z-index:11;
 }
 #ps {
-  left: 15%;
-  transform: rotate(180deg);
+	left: 15%;
+	transform: rotate(180deg);
 }
 #ns {
-  right: 15%;
+	right: 15%;
 }
 input[type=range] {
-  -webkit-appearance: none;
-  appearance: none;
-  position: absolute;
-  z-index: 2;
-  height: 3px;
-  background: -webkit-linear-gradient(
-    0deg,
-    rgb(81, 255, 159),
-    rgb(96, 106, 255)
-  );
-  width: 100%;
-  border-radius: 10px;
-  bottom: 7%;
+	-webkit-appearance: none;
+	appearance: none;
+	position: absolute;
+	z-index: 2;
+	height: 3px;
+	background: -webkit-linear-gradient(0deg,rgb(81, 255, 159),rgb(96, 106, 255));
+	width: 100%;
+	border-radius: 10px;
+	bottom: 7%;
 }
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 3px;
-  width: 3px;
-  border: 0;
-  border-radius:50px;
-  background: #fff;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 3px;
+	width: 3px;
+	border: 0;
+	border-radius:50px;
+	background: #fff;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  height: 3px;
-  background: -webkit-linear-gradient(
-    0deg,
-    rgb(81, 255, 159),
-    rgb(96, 106, 255)
-  );
-  border-radius: 10px;
+	height: 3px;
+	background: -webkit-linear-gradient(0deg,rgb(81, 255, 159),rgb(96, 106, 255));
+	border-radius: 10px;
 }
 .split {
 	height: 100%;
@@ -166,7 +157,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	background-repeat: no-repeat;
 }
 .left_content {
-  text-align: center;
+	text-align: center;
 }
 .mid_content {
 	width: 100%;
@@ -174,19 +165,19 @@ input[type=range]::-webkit-slider-runnable-track {
 	position: relative;
 }
 .right_content {
-    color: white;
+    color: #5bdbe8;
     top: 0;
     width: 100%;
     height: 100%;
 }
 ul {
-  list-style-type: none;
-  padding: 0px;
-  overflow: hidden;
-  background-color: rgba(002,053,062,0.2);
-  margin: auto;
-  position: absolute;
-  width: 100%;
+	list-style-type: none;
+	padding: 0px;
+	overflow: hidden;
+	background-color: rgba(002,053,062,0.2);
+	margin: auto;
+	position: absolute;
+	width: 100%;
 }
 li a{
 	font-family: 'Lobster', cursive;
@@ -216,48 +207,54 @@ h3{
 }
 button a {
 	background: #0b0c10;
-  color: #5bdbe8;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 10px;
+	color: #5bdbe8;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+#lyrics-btn {
+	background: white;
+	color: black;
+	padding: 2px;
+	width: 65px;
 }
 .dropbtn {
-  background: -webkit-linear-gradient(#33ccff 0%, #993366 100%);
-  color: white;
-  padding: 16px 40px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-top: 40px;
-  margin-bottom: 10px;
+	background: -webkit-linear-gradient(#33ccff 0%, #993366 100%);
+	color: white;
+	padding: 16px 40px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-top: 40px;
+	margin-bottom: 10px;
 }
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+	background-color: #2980B9;
 }
 .dropdown {
-  position: relative;
-  display: inline-block;
-  padding: 15px 0px;
-  margin-top: 50px;
+	position: relative;
+	display: inline-block;
+	padding: 15px 0px;
+	margin-top: 50px;
 }
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(002,053,062,0.2);
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border: 2px solid white;
-  margin-top: 10px;
+	display: none;
+	position: absolute;
+	background-color: rgba(002,053,062,0.2);
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border: 2px solid white;
+	margin-top: 10px;
 }
 .dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 .dropdown a:hover {background-color: black;}
 .show {display: block;}
